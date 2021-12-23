@@ -1,0 +1,77 @@
+##### 1、创建仓库
+
+##### 2、安装git
+
+```c
+sudo apt-get install libcurl4-gnutls-dev libexpat1-dev gettext libz-dev libssl-dev
+
+sudo apt-get install git
+```
+
+##### 3、配置个人信息
+
+```c
+git config --global user.name "用户名"   //用户名只是说明谁连接
+
+git config --global user.email "邮箱"   //最好连接的邮箱
+```
+
+##### 4、生成密钥
+
+```c
+ssh-keygen -t rsa -C "邮箱"
+
+一路回车，会在用户主目录.ssh/id_rsa.pub 生成密钥文件，打开后复制。
+```
+
+##### 5、登记客户端密钥
+
+```c
+Settings->SSH and GPG keys->NEW SSH key
+
+粘贴后并设置标题，ADD SSH key
+```
+
+##### 6、验证
+
+```c
+ ssh -T git@github.com
+```
+
+##### 7、克隆仓库
+
+```c
+git clone https://github.com/zzxxwyz/test 
+
+后面的网址是要上传的库的网址连接
+```
+
+##### 8、添加文件
+
+```c
+git add file.c 添加单个文件
+
+git add . 添加当前目录所文件
+```
+
+##### 9、提交
+
+```c
+git commit -m "说明"
+只是提交到缓冲区
+```
+
+##### 10、上传到github
+
+```c
+git push origin main
+
+输入GitHub用户名、密码 
+```
+
+
+
+
+
+
+
